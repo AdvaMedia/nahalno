@@ -1,5 +1,6 @@
-PATH
-  remote: ../journalist
+GIT
+  remote: git://github.com/saratovsource/Journalist.git
+  revision: c19078e332c19f85c2a33626ee80e43d335d0c8c
   specs:
     journalist (0.0.1)
       actionmailer-with-request
@@ -74,7 +75,7 @@ GEM
       bson (= 1.5.2)
     builder (3.0.0)
     cancan (1.6.7)
-    capistrano (2.9.0)
+    capistrano (2.10.0)
       highline
       net-scp (>= 1.0.0)
       net-sftp (>= 2.0.0)
@@ -113,18 +114,18 @@ GEM
       execjs
     eco-source (1.1.0.rc.1)
     erubis (2.7.0)
-    excon (0.9.5)
+    excon (0.6.6)
     execjs (1.3.0)
       multi_json (~> 1.0)
-    fog (1.1.2)
+    fog (0.9.0)
       builder
-      excon (~> 0.9.0)
-      formatador (~> 0.2.0)
+      excon (~> 0.6.1)
+      formatador (>= 0.1.3)
+      json
       mime-types
-      multi_json (~> 1.0.3)
-      net-scp (~> 1.0.4)
-      net-ssh (>= 2.1.3)
-      nokogiri (~> 1.5.0)
+      net-scp (>= 1.0.4)
+      net-ssh (>= 2.1.4)
+      nokogiri (>= 1.4.4)
       ruby-hmac
     formatador (0.2.1)
     formtastic (2.0.2)
@@ -163,7 +164,7 @@ GEM
     mongoid-tree (0.7.0)
       mongoid (~> 2.0)
     mongoid_taggable (0.1.7)
-    multi_json (1.0.4)
+    multi_json (1.1.0)
     multi_xml (0.4.1)
     net-scp (1.0.4)
       net-ssh (>= 1.99.1)

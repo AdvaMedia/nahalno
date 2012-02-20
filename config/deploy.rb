@@ -28,6 +28,7 @@ after "deploy:update_code", :copy_database_config
 task :copy_database_config, roles => :app do
   db_config = "#{shared_path}/mongoid.yml"
   run "cp #{db_config} #{release_path}/config/mongoid.yml"
+  run "cd #{deploy_to}/current; rvm use 1.9.3 do bundle install"
 end
 
 set :unicorn_conf, "/etc/unicorn/nahalno.saratovsource.rb"
@@ -35,7 +36,7 @@ set :unicorn_pid, "/var/run/unicorn/nahalno.saratovsource.pid"
 
 
 
-  set :unicorn_start_cmd, "(cd #{deploy_to}/current; rvm use 1.9.3 do bundle exec unicorn_rails -Dc #{unicorn_conf})"
+set :unicorn_start_cmd, "(cd #{deploy_to}/current; rvm use 1.9.3 do bundle exec unicorn_rails -Dc #{unicorn_conf})"
 
 
 
