@@ -4,7 +4,7 @@ set :application, "nahalno"
 
 # настройка системы контроля версий и репозитария, по умолчанию - git, если используется иная система версий, нужно изменить значение scm
 set :scm, :git
-set :repository,  "https://saratovsource@bitbucket.org/saratovsource/nahalno.git"
+set :repository,  "git@bitbucket.org:saratovsource/nahalno.git"
 
 set :user, "hosting_saratovsource"
 set :use_sudo, false
