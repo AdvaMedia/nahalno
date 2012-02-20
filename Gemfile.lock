@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/saratovsource/Journalist.git
-  revision: c19078e332c19f85c2a33626ee80e43d335d0c8c
+  revision: fc31f743a15f4ed362d1309f4115ecce51ff58eb
   specs:
     journalist (0.0.1)
       actionmailer-with-request
@@ -14,6 +14,7 @@ GIT
       devise
       dragonfly
       eco
+      execjs
       fog
       formtastic
       haml
