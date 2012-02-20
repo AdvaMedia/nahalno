@@ -1,0 +1,22 @@
+html { background: url(i/bg.png) repeat 0 0; }
+
+hgroup { overflow:hidden; width:330px; margin:1.5em auto; }
+h1,h2 { float:left; margin:0; }
+h1 { font-size:4em; }
+h1 span { display:none; }
+h2 { color:#ccc; font-family: Arial, Helvetica, sans-serif; font-style:italic; letter-spacing:-1px; margin: .4em; }
+
+figure { position:relative; margin:0; padding:0 }
+.shit { background:none; width:40px; height:65px; left:20%;  }
+.shit:hover { background: url(i/flies.gif) no-repeat 0 0; overflow:hidden; }
+.shit:hover img { }
+.deer { position:relative; width:227px; margin:auto;  }
+.eye { position:absolute; top:80px; right:36px; display:none; width:11px; height:11px; background:url(i/eye.gif) 0 0 no-repeat; }
+.deer:hover .eye { display:block; }
+.fir-tree { right:15%; margin:auto; }
+.shit, .fir-tree { position:absolute; bottom:0; }
+blockquote { width:64%; margin:auto; }
+blockquote p.author { text-align:right; font-size:.9em; }
+blockquote p.cite { }
+
+footer.info { margin:2em auto 0; width:80%; text-align:center; font-size:.85em; color:#999; }
