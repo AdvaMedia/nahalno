@@ -1,11 +1,12 @@
-GIT
-  remote: git://github.com/saratovsource/Journalist.git
-  revision: fc31f743a15f4ed362d1309f4115ecce51ff58eb
+PATH
+  remote: ../Journalist
   specs:
     journalist (0.0.1)
+      RedCloth
       actionmailer-with-request
       bson
       bson_ext
+      cache_method
       cancan
       carrierwave
       carrierwave-mongoid
@@ -14,7 +15,6 @@ GIT
       devise
       dragonfly
       eco
-      execjs
       fog
       formtastic
       haml
@@ -27,8 +27,10 @@ GIT
       mongoid
       mongoid-tree
       mongoid_taggable
+      omniauth-facebook
+      omniauth-twitter
       rack-cache
-      rails
+      rails (= 3.2.2)
       rmagick
       rubyzip
       russian (~> 0.6.0)
@@ -36,58 +38,68 @@ GIT
       sass
       spine-rails
       state_machine
+      therubyracer
+      tilt
 
 GEM
   remote: https://rubygems.org/
   specs:
-    actionmailer (3.2.0)
-      actionpack (= 3.2.0)
+    RedCloth (4.2.9)
+    actionmailer (3.2.2)
+      actionpack (= 3.2.2)
       mail (~> 2.4.0)
     actionmailer-with-request (0.3.0)
       rails (>= 3)
-    actionpack (3.2.0)
-      activemodel (= 3.2.0)
-      activesupport (= 3.2.0)
+    actionpack (3.2.2)
+      activemodel (= 3.2.2)
+      activesupport (= 3.2.2)
       builder (~> 3.0.0)
       erubis (~> 2.7.0)
-      journey (~> 1.0.0)
+      journey (~> 1.0.1)
       rack (~> 1.4.0)
       rack-cache (~> 1.1)
       rack-test (~> 0.6.1)
       sprockets (~> 2.1.2)
-    activemodel (3.2.0)
-      activesupport (= 3.2.0)
+    activemodel (3.2.2)
+      activesupport (= 3.2.2)
       builder (~> 3.0.0)
-    activerecord (3.2.0)
-      activemodel (= 3.2.0)
-      activesupport (= 3.2.0)
-      arel (~> 3.0.0)
+    activerecord (3.2.2)
+      activemodel (= 3.2.2)
+      activesupport (= 3.2.2)
+      arel (~> 3.0.2)
       tzinfo (~> 0.3.29)
-    activeresource (3.2.0)
-      activemodel (= 3.2.0)
-      activesupport (= 3.2.0)
-    activesupport (3.2.0)
+    activeresource (3.2.2)
+      activemodel (= 3.2.2)
+      activesupport (= 3.2.2)
+    activesupport (3.2.2)
       i18n (~> 0.6)
       multi_json (~> 1.0)
-    arel (3.0.0)
+    addressable (2.2.7)
+    arel (3.0.2)
     bcrypt-ruby (3.0.1)
-    bson (1.5.2)
-    bson_ext (1.5.2)
-      bson (= 1.5.2)
+    bson (1.6.2)
+    bson_ext (1.6.2)
+      bson (~> 1.6.2)
     builder (3.0.0)
+    cache (0.3.2)
+      activesupport (>= 2.3.11)
+      i18n
+    cache_method (0.2.3)
+      cache (>= 0.2.1)
     cancan (1.6.7)
-    capistrano (2.10.0)
+    capistrano (2.12.0)
       highline
       net-scp (>= 1.0.0)
       net-sftp (>= 2.0.0)
       net-ssh (>= 2.0.14)
       net-ssh-gateway (>= 1.1.0)
-    carrierwave (0.5.8)
-      activesupport (~> 3.0)
-    carrierwave-mongoid (0.1.3)
-      carrierwave (>= 0.5.6)
+    carrierwave (0.6.2)
+      activemodel (>= 3.2.0)
+      activesupport (>= 3.2.0)
+    carrierwave-mongoid (0.2.0)
+      carrierwave (~> 0.6.1)
       mongoid (~> 2.1)
-    cells (3.8.2)
+    cells (3.8.3)
       actionpack (~> 3.0)
       railties (~> 3.0)
     coffee-rails (3.2.2)
@@ -96,8 +108,8 @@ GEM
     coffee-script (2.2.0)
       coffee-script-source
       execjs
-    coffee-script-source (1.2.0)
-    delayed_job (3.0.1)
+    coffee-script-source (1.3.1)
+    delayed_job (3.0.2)
       activesupport (~> 3.0)
     delayed_job_mongoid (1.0.8)
       delayed_job (~> 3.0.0)
@@ -107,7 +119,7 @@ GEM
       orm_adapter (~> 0.0.3)
       railties (~> 3.1)
       warden (~> 1.1.1)
-    dragonfly (0.9.10)
+    dragonfly (0.9.12)
       rack
     eco (1.0.0)
       coffee-script
@@ -115,58 +127,66 @@ GEM
       execjs
     eco-source (1.1.0.rc.1)
     erubis (2.7.0)
-    excon (0.6.6)
+    excon (0.13.4)
     execjs (1.3.0)
       multi_json (~> 1.0)
-    fog (0.9.0)
+    faraday (0.7.6)
+      addressable (~> 2.2)
+      multipart-post (~> 1.1)
+      rack (~> 1.1)
+    fog (1.3.1)
       builder
-      excon (~> 0.6.1)
-      formatador (>= 0.1.3)
-      json
+      excon (~> 0.13.0)
+      formatador (~> 0.2.0)
       mime-types
-      net-scp (>= 1.0.4)
-      net-ssh (>= 2.1.4)
-      nokogiri (>= 1.4.4)
+      multi_json (~> 1.0)
+      net-scp (~> 1.0.4)
+      net-ssh (>= 2.1.3)
+      nokogiri (~> 1.5.0)
       ruby-hmac
     formatador (0.2.1)
-    formtastic (2.0.2)
-      rails (~> 3.0)
+    formtastic (2.2.0)
+      actionpack (>= 3.0)
     haml (3.1.4)
     has_scope (0.5.1)
+    hashie (1.2.0)
     highline (1.6.11)
     hike (1.2.1)
-    httparty (0.8.1)
+    httparty (0.8.2)
       multi_json
       multi_xml
+    httpauth (0.1)
     i18n (0.6.0)
-    inherited_resources (1.3.0)
+    inherited_resources (1.3.1)
       has_scope (~> 0.5.0)
-      responders (~> 0.6.0)
-    journey (1.0.1)
-    jquery-rails (2.0.0)
-      railties (>= 3.2.0.beta, < 5.0)
+      responders (~> 0.6)
+    journey (1.0.3)
+    jquery-rails (2.0.2)
+      railties (>= 3.2.0, < 5.0)
       thor (~> 0.14)
-    json (1.6.5)
-    kgio (2.7.2)
-    mail (2.4.1)
+    json (1.6.6)
+    kgio (2.7.4)
+    libv8 (3.3.10.4)
+    mail (2.4.4)
       i18n (>= 0.4.0)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
-    mime-types (1.17.2)
+    mime-types (1.18)
     mimetype-fu (0.1.2)
     mini_magick (3.4)
       subexec (~> 0.2.1)
-    mongo (1.5.2)
-      bson (= 1.5.2)
-    mongoid (2.4.4)
+    mongo (1.6.2)
+      bson (~> 1.6.2)
+    mongoid (2.4.8)
       activemodel (~> 3.1)
       mongo (~> 1.3)
       tzinfo (~> 0.3.22)
     mongoid-tree (0.7.0)
       mongoid (~> 2.0)
     mongoid_taggable (0.1.7)
-    multi_json (1.1.0)
-    multi_xml (0.4.1)
+    multi_json (1.3.2)
+    multi_xml (0.4.4)
+    multipart-post (1.1.5)
     net-scp (1.0.4)
       net-ssh (>= 1.99.1)
     net-sftp (2.0.5)
@@ -174,27 +194,45 @@ GEM
     net-ssh (2.3.0)
     net-ssh-gateway (1.1.0)
       net-ssh (>= 1.99.1)
-    nokogiri (1.5.0)
-    orm_adapter (0.0.6)
+    nokogiri (1.5.2)
+    oauth (0.4.5)
+    oauth2 (0.6.0)
+      faraday (~> 0.7)
+      httpauth (~> 0.1)
+      multi_json (~> 1.0)
+    omniauth (1.1.0)
+      hashie (~> 1.2)
+      rack
+    omniauth-facebook (1.2.0)
+      omniauth-oauth2 (~> 1.0.0)
+    omniauth-oauth (1.0.1)
+      oauth
+      omniauth (~> 1.0)
+    omniauth-oauth2 (1.0.1)
+      oauth2 (~> 0.6.0)
+      omniauth (~> 1.0)
+    omniauth-twitter (0.0.9)
+      omniauth-oauth (~> 1.0)
+    orm_adapter (0.0.7)
     polyglot (0.3.3)
     rack (1.4.1)
-    rack-cache (1.1)
+    rack-cache (1.2)
       rack (>= 0.4)
     rack-ssl (1.3.2)
       rack
     rack-test (0.6.1)
       rack (>= 1.0)
-    rails (3.2.0)
-      actionmailer (= 3.2.0)
-      actionpack (= 3.2.0)
-      activerecord (= 3.2.0)
-      activeresource (= 3.2.0)
-      activesupport (= 3.2.0)
+    rails (3.2.2)
+      actionmailer (= 3.2.2)
+      actionpack (= 3.2.2)
+      activerecord (= 3.2.2)
+      activeresource (= 3.2.2)
+      activesupport (= 3.2.2)
       bundler (~> 1.0)
-      railties (= 3.2.0)
-    railties (3.2.0)
-      actionpack (= 3.2.0)
-      activesupport (= 3.2.0)
+      railties (= 3.2.2)
+    railties (3.2.2)
+      actionpack (= 3.2.2)
+      activesupport (= 3.2.2)
       rack-ssl (~> 1.3.2)
       rake (>= 0.8.7)
       rdoc (~> 3.4)
@@ -203,16 +241,17 @@ GEM
     rake (0.9.2.2)
     rdoc (3.12)
       json (~> 1.4)
-    responders (0.6.5)
+    responders (0.9.1)
+      railties (~> 3.1)
     rmagick (2.13.1)
     ruby-hmac (0.4.0)
-    rubyzip (0.9.6.1)
+    rubyzip (0.9.7)
     russian (0.6.0)
       i18n (>= 0.5.0)
     sanitize (2.0.3)
       nokogiri (>= 1.4.4, < 1.6)
     sass (3.1.15)
-    sass-rails (3.2.4)
+    sass-rails (3.2.5)
       railties (~> 3.2.0)
       sass (>= 3.1.10)
       tilt (~> 1.3)
@@ -224,16 +263,18 @@ GEM
       tilt (~> 1.1, != 1.3.0)
     state_machine (1.1.2)
     subexec (0.2.1)
+    therubyracer (0.10.1)
+      libv8 (~> 3.3.10)
     thor (0.14.6)
     tilt (1.3.3)
     treetop (1.4.10)
       polyglot
       polyglot (>= 0.3.1)
-    tzinfo (0.3.31)
-    uglifier (1.2.3)
+    tzinfo (0.3.33)
+    uglifier (1.2.4)
       execjs (>= 0.3.0)
       multi_json (>= 1.0.2)
-    unicorn (4.2.0)
+    unicorn (4.2.1)
       kgio (~> 2.6)
       rack
       raindrops (~> 0.7)
@@ -245,9 +286,9 @@ PLATFORMS
 
 DEPENDENCIES
   capistrano
-  coffee-rails (~> 3.2.1)
+  coffee-rails
   journalist!
-  rails (= 3.2.0)
-  sass-rails (~> 3.2.3)
+  rails (= 3.2.2)
+  sass-rails
   uglifier (>= 1.0.3)
   unicorn
