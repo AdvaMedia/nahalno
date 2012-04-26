@@ -4,8 +4,8 @@ gem 'rails', '3.2.2'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
-gem "journalist", :path => "../Journalist", :require => "journalist"
-#gem "journalist", :git =>"git://github.com/saratovsource/Journalist.git", :require => "journalist"
+#gem "journalist", :path => "../Journalist", :require => "journalist"
+gem "journalist", :git =>"git://github.com/saratovsource/Journalist.git", :branch => "staging", :require => "journalist"
 gem 'fog'
 
 
