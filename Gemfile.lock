@@ -1,7 +1,5 @@
-GIT
-  remote: git://github.com/saratovsource/Journalist.git
-  revision: 3f49fbadbfdc090f0ac531f07ec3a74779052e72
-  branch: staging
+PATH
+  remote: ../Journalist
   specs:
     journalist (0.0.1)
       RedCloth
@@ -45,7 +43,7 @@ GIT
       tilt
 
 GEM
-  remote: https://rubygems.org/
+  remote: http://rubygems.org/
   specs:
     RedCloth (4.2.9)
     actionmailer (3.2.2)
