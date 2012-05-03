@@ -37,6 +37,7 @@ PATH
       russian (~> 0.6.0)
       sanitize
       sass
+      simple_form
       spine-rails
       state_machine
       therubyracer
@@ -219,10 +220,10 @@ GEM
     omniauth-oauth (1.0.1)
       oauth
       omniauth (~> 1.0)
-    omniauth-oauth2 (1.0.1)
+    omniauth-oauth2 (1.0.2)
       oauth2 (~> 0.6.0)
       omniauth (~> 1.0)
-    omniauth-twitter (0.0.10)
+    omniauth-twitter (0.0.11)
       multi_json (~> 1.3)
       omniauth-oauth (~> 1.0)
     orm_adapter (0.0.7)
@@ -269,6 +270,9 @@ GEM
       railties (~> 3.2.0)
       sass (>= 3.1.10)
       tilt (~> 1.3)
+    simple_form (2.0.1)
+      actionpack (~> 3.0)
+      activemodel (~> 3.0)
     spine-rails (0.1.0)
       rails (>= 3.1.0)
     sprockets (2.1.3)
