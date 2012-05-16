@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/saratovsource/Journalist.git
-  revision: 28f768491118e7a46fb1c53e19421706113aae89
+  revision: 175bd2cff9a9d6f597f9c82411bf1f6d5d410660
   branch: staging
   specs:
     journalist (0.0.1)
@@ -14,7 +14,7 @@ GIT
       carrierwave-mongoid
       cells
       delayed_job_mongoid
-      devise
+      devise (= 2.0.4)
       dragonfly
       eco
       fog
@@ -119,9 +119,9 @@ GEM
     delayed_job_mongoid (1.0.8)
       delayed_job (~> 3.0.0)
       mongoid (>= 2.0)
-    devise (2.1.0)
+    devise (2.0.4)
       bcrypt-ruby (~> 3.0)
-      orm_adapter (~> 0.0.7)
+      orm_adapter (~> 0.0.3)
       railties (~> 3.1)
       warden (~> 1.1.1)
     dragonfly (0.9.12)
