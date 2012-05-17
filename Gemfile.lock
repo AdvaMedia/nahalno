@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/saratovsource/Journalist.git
-  revision: fb1ea2af6556e33e12a716964d269aa1c9c27a41
+  revision: aaf56ccd6a983ee339e501862cf5f24bf7734a90
   branch: staging
   specs:
     journalist (0.0.1)
@@ -104,7 +104,7 @@ GEM
     carrierwave-mongoid (0.2.1)
       carrierwave (~> 0.6.1)
       mongoid (~> 2.1)
-    cells (3.8.4)
+    cells (3.8.5)
       actionpack (~> 3.0)
       railties (~> 3.0)
     coffee-rails (3.2.2)
@@ -172,6 +172,7 @@ GEM
     jquery-rails (2.0.2)
       railties (>= 3.2.0, < 5.0)
       thor (~> 0.14)
+    jruby-pageant (1.0.2)
     json (1.7.3)
     kaminari (0.13.0)
       actionpack (>= 3.0.0)
@@ -208,7 +209,8 @@ GEM
       net-ssh (>= 1.99.1)
     net-sftp (2.0.5)
       net-ssh (>= 2.0.9)
-    net-ssh (2.3.0)
+    net-ssh (2.4.0)
+      jruby-pageant (>= 1.0.2)
     net-ssh-gateway (1.1.0)
       net-ssh (>= 1.99.1)
     netrc (0.7.1)
