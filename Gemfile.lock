@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/saratovsource/Journalist.git
-  revision: 35be9d152031c1bf7913aac44e32e0eec9277b2d
+  revision: a4c38246f4d556f05c0a7600be2f9b54d052a6c1
   branch: staging
   specs:
     journalist (0.0.1)
