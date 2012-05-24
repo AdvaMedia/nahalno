@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/saratovsource/Journalist.git
-  revision: f0e2ec6ee1e928ce28f67d30ba1f34d670bb9d3b
+  revision: baaa94a74714433fc93fae093e76f033f96b3489
   branch: staging
   specs:
     journalist (0.0.1)
@@ -209,7 +209,7 @@ GEM
       net-ssh (>= 1.99.1)
     net-sftp (2.0.5)
       net-ssh (>= 2.0.9)
-    net-ssh (2.4.0)
+    net-ssh (2.5.1)
       jruby-pageant (>= 1.0.2)
     net-ssh-gateway (1.1.0)
       net-ssh (>= 1.99.1)
