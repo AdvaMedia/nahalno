@@ -191,7 +191,10 @@ journalist/timeline.png: journalist/timeline-f462dd63f74bf8c9a80db7205a63ae8c.pn
 journalist/timeline2.png: journalist/timeline2-87a364bbc7cd9d02f45752f31057192f.png
 journalist/twitter.png: journalist/twitter-082c4dc85545a200d9c0d353bced41f0.png
 journalist/user.png: journalist/user-103873c76e4e75de75d99f179f959adb.png
-journalist/application.js: journalist/application-1b6fa76c7b4e1adc3326920df744ac79.js
+api/application.js: api/application-885c1cefd9d73d37f643283b7759bd28.js
+application.js: application-71c9eaf3c06bffedf041f8d52c511254.js
+journalist/application.js: journalist/application-947bb2d7562d3701ca6ceec4912a4d97.js
 journalist/base.js: journalist/base-b2df125ed4c7c785197097331aec5e4d.js
+api/application.css: api/application-7270767b2a9e9fff880aa5de378ca791.css
 journalist/application.css: journalist/application-61a676797cdc8a620a27f0bdada9889c.css
 journalist/base.css: journalist/base-fc1bf3ad81849b1e33064e5f8feb45d1.css
