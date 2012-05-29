@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/saratovsource/Journalist.git
-  revision: 749df2f84707cb78b54f7986deecb3482a88d935
+  revision: ad1de151fb4d1411370ea5708a407df34a8f4cca
   branch: staging
   specs:
     journalist (0.0.1)
@@ -136,7 +136,7 @@ GEM
     excon (0.13.4)
     execjs (1.4.0)
       multi_json (~> 1.0)
-    faraday (0.8.0)
+    faraday (0.8.1)
       multipart-post (~> 1.1)
     fog (1.3.1)
       builder
