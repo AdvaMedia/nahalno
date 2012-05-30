@@ -34,6 +34,8 @@ journalist/gritter/gritter-light.png: journalist/gritter/gritter-light-45f6a55bd
 journalist/gritter/gritter-long.png: journalist/gritter/gritter-long-158e8b72ce5968c0b9bdffd1739a94ab.png
 journalist/gritter/gritter.png: journalist/gritter/gritter-3847baaaf41f5ba09e51c0959808917b.png
 journalist/gritter/ie-spacer.gif: journalist/gritter/ie-spacer-f561b1c264ed4bdb4ebfaacbe1b8313a.gif
+journalist/groove_bottom.png: journalist/groove_bottom-11604e5d533dc3b441a23007efcd35b2.png
+journalist/groove_top.png: journalist/groove_top-a4a21f447df33a5f603d162188ae5090.png
 journalist/icons/16px/advertising-inv.png: journalist/icons/16px/advertising-inv-fbe2ae409c24233c26bb76a9ad58dea4.png
 journalist/icons/16px/advertising.png: journalist/icons/16px/advertising-5ea400d0ec1f0d30923194a1bd4a61b4.png
 journalist/icons/16px/attibutes-inv.png: journalist/icons/16px/attibutes-inv-4f4cf38101c6425b9e851e45694e3af6.png
@@ -196,5 +198,5 @@ application.js: application-71c9eaf3c06bffedf041f8d52c511254.js
 journalist/application.js: journalist/application-947bb2d7562d3701ca6ceec4912a4d97.js
 journalist/base.js: journalist/base-b2df125ed4c7c785197097331aec5e4d.js
 api/application.css: api/application-7270767b2a9e9fff880aa5de378ca791.css
-journalist/application.css: journalist/application-61a676797cdc8a620a27f0bdada9889c.css
-journalist/base.css: journalist/base-fc1bf3ad81849b1e33064e5f8feb45d1.css
+journalist/application.css: journalist/application-69c80270176444206b2161b0ba93c149.css
+journalist/base.css: journalist/base-83d3afc405d265be463c7b3028cd3e17.css
