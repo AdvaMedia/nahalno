@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/saratovsource/Journalist.git
-  revision: 489a45af316e2a9b61d8c57044bfa081fafe3883
+  revision: f303d14014f4186938abffc3a8dbd5141b422522
   branch: staging
   specs:
     journalist (0.0.1)
@@ -18,7 +18,6 @@ GIT
       dragonfly
       eco
       fog
-      formtastic
       haml
       httparty
       inherited_resources
@@ -149,8 +148,6 @@ GEM
       nokogiri (~> 1.5.0)
       ruby-hmac
     formatador (0.2.3)
-    formtastic (2.2.0)
-      actionpack (>= 3.0)
     haml (3.1.6)
     has_scope (0.5.1)
     hashie (1.2.0)
